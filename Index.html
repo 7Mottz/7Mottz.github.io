@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucas Bello Motta · Dados & Automação</title>
+<meta name="description" content="Portfólio de Lucas Bello Motta — Analytics Engineer, automação e dados. Curitiba, PR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#412259; --berry:#8B346D; --wine:#BA3358; --orange:#EB5B25; --gold:#F7A70A;
+  --bg:#FBF8FC; --surface:#FFFFFF; --ink:#22112E; --muted:#6A5878; --line:#E7DEEC;
+  --display:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"IBM Plex Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#170C20; --surface:#21122D; --ink:#F4ECF8; --muted:#B7A6C4; --line:#38244A;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+
+html[data-lang="pt"] .en, html[data-lang="en"] .pt{display:none}
+
+.stripe{display:flex;height:6px}
+.stripe span{flex:1}
+.stripe span:nth-child(1){background:var(--plum)}
+.stripe span:nth-child(2){background:var(--berry)}
+.stripe span:nth-child(3){background:var(--wine)}
+.stripe span:nth-child(4){background:var(--orange)}
+.stripe span:nth-child(5){background:var(--gold)}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:800 20px var(--display);text-decoration:none;letter-spacing:-.02em}
+.logo b{color:var(--orange)}
+.nav-links{display:flex;gap:22px;align-items:center;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.lang{border:1.5px solid var(--line);background:none;color:var(--ink);font:600 13px var(--body);padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang:hover{border-color:var(--berry)}
+
+/* HERO */
+.hero{padding:72px 0 88px}
+.hero h1{font:800 clamp(48px,9vw,112px)/.92 var(--display);letter-spacing:-.04em;max-width:11ch}
+.hero h1 .last{
+  background:linear-gradient(90deg,var(--plum),var(--berry) 30%,var(--wine) 55%,var(--orange) 80%,var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .hero h1 .last{
+    background:linear-gradient(90deg,#B98AD8,var(--wine) 45%,var(--orange) 75%,var(--gold));
+    -webkit-background-clip:text;background-clip:text;
+  }
+}
+.hero .role{font:600 clamp(20px,2.6vw,26px)/1.3 var(--display);margin-top:28px;max-width:30ch}
+.hero .intro{color:var(--muted);margin-top:14px;max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
+.btn.main{background:var(--plum);color:#fff}
+.btn.main:hover{background:var(--berry)}
+.btn.ghost{border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--berry)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .btn.main{background:var(--orange);color:#1a0d10}
+}
+
+/* SECTIONS */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(30px,4.5vw,44px)/1.05 var(--display);letter-spacing:-.03em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:40px}
+
+/* PROJECTS */
+.projects{display:grid;gap:0}
+.proj{display:grid;grid-template-columns:10px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}
+.proj:first-child{padding-top:0}
+.proj .bar{border-radius:6px}
+.proj h3{font:700 22px/1.25 var(--display);letter-spacing:-.01em}
+.proj p{color:var(--muted);margin-top:8px;max-width:64ch}
+.proj .impact{color:var(--ink);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{font-size:13px;padding:3px 10px;border-radius:999px;background:color-mix(in srgb,var(--berry) 10%,transparent);color:var(--ink)}
+.proj a.link{display:inline-block;margin-top:12px;font-weight:600;font-size:15px;color:var(--wine)}
+.status{font:500 13px var(--body);color:var(--orange);margin-left:8px;white-space:nowrap}
+.proj.featured h3{font-size:clamp(26px,3.4vw,34px)}
+.proj.featured .bar{background:linear-gradient(var(--plum),var(--berry),var(--wine),var(--orange),var(--gold))}
+
+/* TIMELINE */
+.timeline{list-style:none;position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding-bottom:34px}
+.timeline li::before{content:"";position:absolute;left:-28px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--berry)}
+.timeline li.now::before{background:var(--orange);border-color:var(--orange)}
+.when{font-size:14px;color:var(--muted)}
+.timeline h3{font:700 20px/1.3 var(--display)}
+.timeline p{color:var(--muted);max-width:62ch;margin-top:4px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.edu{list-style:none}
+.edu li{padding:14px 0;border-bottom:1px solid var(--line)}
+.edu strong{display:block;font-weight:600}
+.edu span{color:var(--muted);font-size:15px}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.stack span{padding:8px 14px;border:1.5px solid var(--line);border-radius:10px;font-weight:500;font-size:15px}
+
+/* CONTACT */
+.contact{background:var(--plum);color:#fff;border-radius:28px;padding:56px 40px;margin:72px 0}
+.contact h2{color:#fff}
+.contact p{color:#E6D6F0;max-width:52ch}
+.contact .cta .btn.main{background:var(--gold);color:var(--plum)}
+.contact .cta .btn.main:hover{background:#fff}
+.contact .cta .btn.ghost{border-color:#8E6BA8;color:#fff}
+
+footer{padding:24px 0 40px;color:var(--muted);font-size:14px}
+
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .nav-links a{display:none}
+  .hero{padding:40px 0 64px}
+  .two{grid-template-columns:1fr;gap:40px}
+  .proj{gap:16px}
+  .contact{padding:40px 24px;border-radius:20px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero .role,.hero .intro,.hero .cta{animation:rise .8s .15s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#">lucas<b>.</b>motta</a>
+    <div class="nav-links">
+      <a href="#projetos"><span class="pt">Projetos</span><span class="en">Projects</span></a>
+      <a href="#experiencia"><span class="pt">Experiência</span><span class="en">Experience</span></a>
+      <a href="#contato"><span class="pt">Contato</span><span class="en">Contact</span></a>
+      <button class="lang" id="langBtn" aria-label="Mudar idioma / Switch language">EN</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Lucas Bello <span class="last">Motta</span></h1>
+    <p class="role">
+      <span class="pt">Analytics Engineer · dados, automação e IA aplicada</span>
+      <span class="en">Analytics Engineer · data, automation and applied AI</span>
+    </p>
+    <p class="intro">
+      <span class="pt">Transformo planilhas soltas e processos manuais em pipelines, automações e dashboards que a gestão realmente usa. Hoje cuido da infraestrutura de dados de uma escola privada em Curitiba — do ERP escolar ao marketing de captação.</span>
+      <span class="en">I turn scattered spreadsheets and manual work into pipelines, automations and dashboards that leadership actually uses. Today I run the data infrastructure of a private school in Curitiba, Brazil — from the school ERP to lead-generation marketing.</span>
+    </p>
+    <div class="cta">
+      <a class="btn main" href="#projetos"><span class="pt">Ver projetos</span><span class="en">See projects</span></a>
+      <a class="btn ghost" href="https://github.com/7Mottz" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+</div>
+
+<section id="projetos">
+  <div class="wrap">
+    <h2><span class="pt">Projetos</span><span class="en">Projects</span></h2>
+    <p class="lead">
+      <span class="pt">Trabalho real, com problema de verdade por trás. Dados sensíveis ficam de fora; o raciocínio e a arquitetura, não.</span>
+      <span class="en">Real work with a real problem behind it. Sensitive data stays out; the reasoning and architecture don't.</span>
+    </p>
+
+    <div class="projects">
+      <article class="proj featured">
+        <div class="bar"></div>
+        <div>
+          <h3><span class="pt">Automação de emissão de notas fiscais</span><span class="en">Automated invoice issuing</span></h3>
+          <p><span class="pt">Fluxo em n8n que recebe cada venda da loja da escola e emite NF-e e NFS-e automaticamente, com registro em planilha e alerta de erro no Telegram. <span class="impact">Elimina cerca de 400 emissões manuais por mês.</span></span><span class="en">n8n workflow that catches every sale from the school's online store and issues product and service invoices automatically, logging them to a sheet and alerting on Telegram when one fails. <span class="impact">Removes roughly 400 manual issuances per month.</span></span></p>
+          <div class="tags"><span>n8n</span><span>JavaScript</span><span>REST APIs</span><span>Webhooks</span><span>Google Sheets</span></div>
+          <a class="link" href="https://github.com/7Mottz/automacao-notas-fiscais-n8n" target="_blank" rel="noopener"><span class="pt">Ver repositório</span><span class="en">View repository</span></a>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="bar" style="background:var(--berry)"></div>
+        <div>
+          <h3><span class="pt">Inteligência geográfica para captação</span><span class="en">Geospatial growth analytics</span></h3>
+          <p><span class="pt">Geolocalização de toda a base de alunos e mapa de calor da concorrência com dados do Censo Escolar, para decidir onde investir em anúncios pagos de captação.</span><span class="en">Geocoded the entire student base and built a competitor heatmap from national school census data to decide where to target paid lead-generation ads.</span></p>
+          <div class="tags"><span>Python</span><span><span class="pt">Geocodificação</span><span class="en">Geocoding</span></span><span><span class="pt">Mapas de calor</span><span class="en">Heatmaps</span></span><span><span class="pt">Censo Escolar</span><span class="en">School census</span></span></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="bar" style="background:var(--wine)"></div>
+        <div>
+          <h3><span class="pt">Dashboards de gestão escolar</span><span class="en">School management dashboards</span></h3>
+          <p><span class="pt">Painéis de indicadores usados pela direção e pelo marketing, construídos sobre dados do ERP escolar (ActiveSoft), cobranças e recebimentos.</span><span class="en">KPI dashboards used by leadership and marketing, built on school ERP (ActiveSoft), billing and payments data.</span></p>
+          <div class="tags"><span>Power BI</span><span>JavaScript</span><span>SQL</span></div>
+          <a class="link" href="https://github.com/7Mottz/dashboard-gestao-escolar" target="_blank" rel="noopener"><span class="pt">Ver repositório</span><span class="en">View repository</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <h2><span class="pt">Experiência</span><span class="en">Experience</span></h2>
+    <p class="lead"><span class="pt">Da engenharia de bioprocessos aos dados — o mesmo gosto por processo, medição e melhoria.</span><span class="en">From bioprocess engineering to data — the same taste for process, measurement and improvement.</span></p>
+    <ol class="timeline">
+      <li class="now">
+        <div class="when"><span class="pt">Atual · Curitiba, PR</span><span class="en">Current · Curitiba, Brazil</span></div>
+        <h3><span class="pt">Analista de Dados & Automação — Colégio Modelo</span><span class="en">Data & Automation Analyst — Colégio Modelo</span></h3>
+        <p><span class="pt">Infraestrutura de dados, automações, chatbots e dashboards com IA para a gestão e o marketing da escola.</span><span class="en">Data infrastructure, automations, chatbots and AI-powered dashboards for school management and marketing.</span></p>
+      </li>
+      <li>
+        <div class="when"><span class="pt">Mar 2025 · San Francisco, EUA</span><span class="en">Mar 2025 · San Francisco, USA</span></div>
+        <h3>Operations Assistant (trainee) — Silicon Valley Brasil</h3>
+        <p><span class="pt">Imersão no ecossistema de startups do Vale do Silício.</span><span class="en">Immersion in the Silicon Valley startup ecosystem.</span></p>
+      </li>
+      <li>
+        <div class="when"><span class="pt">Mai – Ago 2023 · Campo Largo, PR</span><span class="en">May – Aug 2023 · Campo Largo, Brazil</span></div>
+        <h3><span class="pt">Estagiário de Qualidade — Indústria de Papelão Hörlle</span><span class="en">Quality Intern — Hörlle Cardboard Industry</span></h3>
+        <p><span class="pt">Controle de qualidade em processo industrial.</span><span class="en">Quality control in an industrial process.</span></p>
+      </li>
+    </ol>
+
+    <div class="two" style="margin-top:40px">
+      <div>
+        <h3 style="font:700 22px var(--display);margin-bottom:8px"><span class="pt">Formação</span><span class="en">Education</span></h3>
+        <ul class="edu">
+          <li><strong><span class="pt">Pós-graduação em Engenharia de IA Aplicada</span><span class="en">Postgraduate, Applied AI Engineering</span></strong><span><span class="pt">Em andamento</span><span class="en">In progress</span></span></li>
+          <li><strong><span class="pt">Análise e Desenvolvimento de Sistemas — PUCRS</span><span class="en">Systems Analysis & Development — PUCRS</span></strong><span><span class="pt">Em andamento</span><span class="en">In progress</span></span></li>
+          <li><strong><span class="pt">Engenharia de Bioprocessos e Biotecnologia</span><span class="en">Bioprocess & Biotechnology Engineering</span></strong><span>Universidade Positivo</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font:700 22px var(--display);margin-bottom:16px">Stack</h3>
+        <div class="stack">
+          <span>Python</span><span>SQL</span><span>pandas</span><span>PostgreSQL</span><span>Supabase</span><span>FastAPI</span><span>n8n</span><span>Power BI</span><span>JavaScript</span><span>React</span><span>RAG / LLMs</span><span>Excel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="contact" id="contato">
+    <h2><span class="pt">Vamos conversar</span><span class="en">Let's talk</span></h2>
+    <p><span class="pt">Aberto a vagas de Analytics Engineer, Data Engineer e automação com IA — remoto ou em Curitiba.</span><span class="en">Open to Analytics Engineer, Data Engineer and AI automation roles — remote or in Curitiba.</span></p>
+    <div class="cta">
+      <a class="btn main" href="mailto:SEU-EMAIL@gmail.com"><span class="pt">Mandar e-mail</span><span class="en">Send an email</span></a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/7Mottz" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <footer>© 2026 Lucas Bello Motta · Curitiba, PR</footer>
+</div>
+
+<div class="stripe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('langBtn');
+  function set(l){
+    root.setAttribute('data-lang',l);
+    root.setAttribute('lang',l==='pt'?'pt-BR':'en');
+    btn.textContent=l==='pt'?'EN':'PT';
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+  set(saved || ((navigator.language||'pt').toLowerCase().startsWith('pt')?'pt':'en'));
+  btn.addEventListener('click',function(){set(root.getAttribute('data-lang')==='pt'?'en':'pt')});
+})();
+</script>
+</body>
+</html>
